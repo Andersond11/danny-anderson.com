@@ -18,7 +18,7 @@
     %meta{:charset => "utf-8"}
 
     %title
-      Austin Interpreters for the Deaf
+      danny-anderson.com
 
     %meta{:name => "description", :content => ""}
     -# %meta{:name => "keywords", :content => ""}
@@ -36,6 +36,7 @@
     -# %meta{:name => "apple-mobile-web-app-capable", :content => "yes"}
     -# %meta{:name => "apple-mobile-web-app-status-bar-style", :content => "black"}
     -# %link{:rel => "apple-touch-startup-image", :href => "/img/touch/startup.png"}
+    %link{ :href => 'http://fonts.googleapis.com/css?family=Arapey', :rel => 'stylesheet', :type => 'text/css' }
 
     -# RSS
     -# ==========================================================================
@@ -70,7 +71,7 @@
     -# CSS
     -# ==========================================================================
 
-    = stylesheet_link_tag "style.css"
+    = stylesheet_link_tag "all.css"
     -# %link{:rel => "stylesheet", :media => "only screen and (min-width: 45em)", :href => "/css/widescreen.css"}
 
     -# IE Fixes
@@ -112,13 +113,9 @@
     -# ==========================================================================
     -# Content
     -# ==========================================================================
-    =partial 'navigation'
+    /=partial 'navigation'
 
-    %header.main_header
-      =image_tag "logo.png", {:alt => 'AID Logo'}
-        
-    .main_content
-      = yield
+    = yield
 
     -# JS
     -# ==========================================================================
