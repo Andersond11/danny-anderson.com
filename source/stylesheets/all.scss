@@ -1,3 +1,15 @@
+.jumbotron {
+  background: url('../images/main-1.png') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 650px;
+  h1 {
+    color: #C78C38;
+  }
+}
+/*
 $main-font-color: #7FB269;
 $main-font-face: 'Rokkitt', serif;
 
@@ -13,3 +25,4 @@ h1 {
 	font-weight: normal;
 	margin: 0.5em 0;
 }
+*/
