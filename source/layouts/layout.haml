@@ -36,7 +36,7 @@
     -# %meta{:name => "apple-mobile-web-app-capable", :content => "yes"}
     -# %meta{:name => "apple-mobile-web-app-status-bar-style", :content => "black"}
     -# %link{:rel => "apple-touch-startup-image", :href => "/img/touch/startup.png"}
-    %link{ :href => 'http://fonts.googleapis.com/css?family=Arapey', :rel => 'stylesheet', :type => 'text/css' }
+    %link{ :href => 'http://fonts.googleapis.com/css?family=Rokkitt', :rel => 'stylesheet', :type => 'text/css' }
 
     -# RSS
     -# ==========================================================================
@@ -71,6 +71,7 @@
     -# CSS
     -# ==========================================================================
 
+    = stylesheet_link_tag "http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"
     = stylesheet_link_tag "all.css"
     -# %link{:rel => "stylesheet", :media => "only screen and (min-width: 45em)", :href => "/css/widescreen.css"}
 
@@ -128,6 +129,7 @@
 
     -# Custom JS
 
+    %script{:src => "http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"}
     -# %script{:src => "/js/app.js"}
 
     -#
