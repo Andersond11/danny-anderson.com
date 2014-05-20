@@ -1,3 +1,13 @@
+/* NAVBAR */
+.navbar-inverse {
+  background-color: #000;
+}
+
+.navbar-inverse .navbar-nav > li.active > a {
+  color: #FFD783;
+}
+
+/* JUMBOTRON */
 .jumbotron {
   background: url('../images/main-1.png') no-repeat;
   -webkit-background-size: cover;
