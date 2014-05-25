@@ -12,7 +12,15 @@ end
 
 page "/feed.xml", :layout => false
 
+# Clean URLs
 activate :directory_indexes
+
+ready do
+  # Handlebar precompile
+  require 'handlebars_assets'  
+  sprockets.append_path HandlebarsAssets.path  
+end
+
 
 # Methods defined in the helpers block are available in templates
 helpers do
@@ -21,10 +29,10 @@ helpers do
   end
 end
 
+# Sprockets
+activate :sprockets
 set :css_dir, 'stylesheets'
-
 set :js_dir, 'javascripts'
-
 set :images_dir, 'images'
 
 # Build-specific configuration
