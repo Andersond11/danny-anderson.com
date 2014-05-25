@@ -1,26 +1,9 @@
-/* NAVBAR */
-.navbar-inverse {
-  background-color: #000;
-}
+/*
+*= require config
+*
+*= require jumbotron
+*= require navbar
+*= require show
+*= require social-links
+*/
 
-.navbar-inverse .navbar-nav > li.active > a {
-  color: #FFD783;
-}
-
-/* JUMBOTRON */
-.jumbotron {
-  background: url('../images/main-1.png') no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 150px;
-  h1 {
-    color: #FFD783;
-  }
-}
-
-/* SOCIAL LINKS */
-.social_image {
-  width: 35px;
-}
