@@ -1,4 +1,4 @@
 #= require handlebars
 #= require datetime
-#= require shows
+#= require gcal
 #= require_tree ./templates
