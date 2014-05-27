@@ -27,6 +27,15 @@ helpers do
   def nav_active(page)
     current_page.url == page ? {:class => "active"} : {}
   end
+
+  def page_name
+    page = current_page.url.gsub(/\//, '')
+    if page == ''
+      page = 'index'
+    end
+    page
+  end
+
 end
 
 # Sprockets
