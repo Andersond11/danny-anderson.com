@@ -12,19 +12,36 @@ end
 
 page "/feed.xml", :layout => false
 
+# Clean URLs
 activate :directory_indexes
+
+ready do
+  # Handlebar precompile
+  require 'handlebars_assets'  
+  sprockets.append_path HandlebarsAssets.path  
+end
+
 
 # Methods defined in the helpers block are available in templates
 helpers do
   def nav_active(page)
     current_page.url == page ? {:class => "active"} : {}
   end
+
+  def page_name
+    page = current_page.url.gsub(/\//, '')
+    if page == ''
+      page = 'index'
+    end
+    page
+  end
+
 end
 
+# Sprockets
+activate :sprockets
 set :css_dir, 'stylesheets'
-
 set :js_dir, 'javascripts'
-
 set :images_dir, 'images'
 
 # Build-specific configuration
