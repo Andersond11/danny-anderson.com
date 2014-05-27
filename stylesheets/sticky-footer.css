@@ -1,0 +1,17 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+/* line 4, /Users/developer/Dropbox/development/danny-anderson.com-mm/source/stylesheets/sticky-footer.scss */
+html {
+  position: relative;
+  min-height: 100%; }
+
+/* line 8, /Users/developer/Dropbox/development/danny-anderson.com-mm/source/stylesheets/sticky-footer.scss */
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px; }
+
+/* line 12, /Users/developer/Dropbox/development/danny-anderson.com-mm/source/stylesheets/sticky-footer.scss */
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%; }

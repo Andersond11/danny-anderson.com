@@ -1,0 +1,10 @@
+/* line 2, /Users/developer/Dropbox/development/danny-anderson.com-mm/source/stylesheets/show.css.scss */
+#shows h1 {
+  font-size: 2em; }
+
+/* line 7, /Users/developer/Dropbox/development/danny-anderson.com-mm/source/stylesheets/show.css.scss */
+.show {
+  padding: .5em 0; }
+  /* line 10, /Users/developer/Dropbox/development/danny-anderson.com-mm/source/stylesheets/show.css.scss */
+  .show .title {
+    font-weight: bold; }

@@ -1,0 +1,8 @@
+/* NAVBAR */
+/* line 3, /Users/developer/Dropbox/development/danny-anderson.com-mm/source/stylesheets/navbar.css.scss */
+.navbar-inverse {
+  background-color: #000; }
+
+/* line 7, /Users/developer/Dropbox/development/danny-anderson.com-mm/source/stylesheets/navbar.css.scss */
+.navbar-inverse .navbar-nav > li.active > a {
+  color: #FFD783; }
