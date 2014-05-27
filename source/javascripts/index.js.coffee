@@ -1,3 +1,3 @@
 s = new GCal("and.danny@gmail.com")
-s.allEvents()
+s.allEvents('#shows', 'show', 5)
 
