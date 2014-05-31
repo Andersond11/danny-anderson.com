@@ -13,7 +13,7 @@
     <link href="../stylesheets/sticky-footer.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="../stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
-  <body class='about about_index'>
+  <body class='about-musician about-musician_index'>
     <nav class='navbar navbar-inverse navbar-fixed-top' role='navigation'>
       <div class='container'>
         <div class='navbar-header'>
@@ -33,10 +33,19 @@
                 Home
               </a>
             </li>
-            <li class='active'>
-              <a href='/about/'>
+            <li class='active dropdown'>
+              <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
                 About
+                <b class='caret'></b>
               </a>
+              <ul class='dropdown-menu'>
+                <li>
+                  <a href='/about-software'>Software Developer</a>
+                </li>
+                <li class='active'>
+                  <a href='/about-musician'>Musician</a>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -50,23 +59,14 @@
       </div>
     </div>
     <div class='container'>
-      <div class='row'>
-        <div class='col-xs-12'>
-          <p class='lead'>
-            A musician and software developer living in Austin Texas.
-          </p>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='col-md-6'>
-          <p>
-            A graduate of Berklee College of Music in Boston, I've toured extensively throughout the Midwest and on both east and west coasts, including performances at the Rochester International Jazz Festival and the Monterey Jazz Festival. I've written and recorded music for a number of artists, commercials and a full length documentary.
-          </p>
-        </div>
-        <div class='col-md-6'>
-          <p>
-            Working as a software developer for the past 8 years, I've worked in a number of languages, including ActionScript, PHP, JavaScript and most recently Ruby. In that time, I've worked on various projects ranging from building static websites to managing an online corporate marketing and reporting software.
-          </p>
+      <div class='row about'>
+        <div class='col-md-8 col-md-push-2 musician'>
+          <h1>Musician</h1>
+          <p>A performing artist for nearly 20 years, I've has been fortunate to perform around the US in a variety of musical settings.</p>
+          <p>A recipient of <a href="http://berklee.edu">Berklee College of Music</a>'s 1999 North American Scholarship Tour Award, I attended the prestigious college and graduated with my Bachelor of Music in 2001. Upon returning to my hometown in Southeast Texas, he spent several years teaching, practicing and performing with local artists.</p>
+          <p>I made my way to Austin in 2004, where I immersed myself in the local music scene performing with various groups locally and throughout the midwest. In 2005, I co-founded the eclectic jazz-funk-ska group About:Blank who became a staple of the local music scene and, in 2009-2010, we were voted the #4 Jazz Band in Austin by the Austin Chronicle Music Awards.</p>
+          <p>I also perform with trumpeter Erik Telford's group - ETC who, in 2010, released their first album 'Kinetic'. The album garnered several great national reviews and an eventual selection as one of the Boston Globes "Top 10 Jazz Albums of 2010" as well as being nominated in the top 40 albums of 2010 by JazzTimes. This recognition led to a 2010 performance at the Rochester International Jazz Festival and a 2011 performance at the Monterey Jazz Festival.</p>
+          <p>For the past several years, I've worked with <a href="http://mountpressmore.com">Mount Pressmore</a>, who released our first album in December of 2013 and have been receiving some <a href="http://mountpressmore.com/press">great press</a> from around the country. We are currently beginning work on a follow record that we hope to release late in 2014, or early 2015.</p>
         </div>
       </div>
     </div>

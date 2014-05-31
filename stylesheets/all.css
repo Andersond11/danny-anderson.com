@@ -12,14 +12,22 @@ body {
   /* line 9, /Users/developer/Dropbox/development/danny-anderson.com-mm/source/stylesheets/jumbotron.css.scss */
   .jumbotron h1 {
     color: #FFD783; }
+/* COLORS */
 /* NAVBAR */
-/* line 3, /Users/developer/Dropbox/development/danny-anderson.com-mm/source/stylesheets/navbar.css.scss */
-.navbar-inverse {
-  background-color: #000; }
+/* line 8, /Users/developer/Dropbox/development/danny-anderson.com-mm/source/stylesheets/navbar.css.scss */
+.navbar-inverse, .dropdown-menu {
+  background-color: black; }
 
-/* line 7, /Users/developer/Dropbox/development/danny-anderson.com-mm/source/stylesheets/navbar.css.scss */
-.navbar-inverse .navbar-nav > li.active > a {
-  color: #FFD783; }
+/* line 12, /Users/developer/Dropbox/development/danny-anderson.com-mm/source/stylesheets/navbar.css.scss */
+.dropdown-menu > li > a {
+  background-color: black;
+  color: #999999; }
+
+/* Over specified to over ride bootstrap */
+/* line 18, /Users/developer/Dropbox/development/danny-anderson.com-mm/source/stylesheets/navbar.css.scss */
+.navbar-inverse .navbar-nav > li.active > a, .dropdown-menu > li.active > a {
+  background-color: black;
+  color: #ffd783; }
 /* line 2, /Users/developer/Dropbox/development/danny-anderson.com-mm/source/stylesheets/show.css.scss */
 #shows h1 {
   font-size: 2em; }
@@ -30,12 +38,16 @@ body {
   /* line 10, /Users/developer/Dropbox/development/danny-anderson.com-mm/source/stylesheets/show.css.scss */
   .show .title {
     font-weight: bold; }
+/* line 2, /Users/developer/Dropbox/development/danny-anderson.com-mm/source/stylesheets/about.css.scss */
+.about h1 {
+  font-size: 1.5em; }
 /* line 1, /Users/developer/Dropbox/development/danny-anderson.com-mm/source/stylesheets/social-links.css.scss */
 .social_image {
   width: 35px; }
 /*
 
 *
+
 
 
 
