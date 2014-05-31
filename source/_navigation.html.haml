@@ -15,7 +15,7 @@
         -#%li{nav_active('/blog/')}
           -#%a{:href => 'blog'}
             -#Blog 
-        %li.dropdown
+        %li.dropdown{nav_active('/about-software/'), nav_active('/about-musician/')}
           %a.dropdown-toggle{:href => '#', 'data-toggle' => "dropdown"} 
             About
             %b.caret
@@ -23,4 +23,4 @@
             %li{nav_active('/about-software/')}
               %a{:href => '/about-software'} Software Developer
             %li{nav_active('/about-musician/')}
-              %a{:href => '/about-musician/'} Musician
+              %a{:href => '/about-musician'} Musician
