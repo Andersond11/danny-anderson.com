@@ -1,11 +1,1 @@
-/* line 1, /Users/developer/Dropbox/development/danny-anderson.com-mm/source/stylesheets/jumbotron.css.scss */
-.jumbotron {
-  background: url("../images/main-1.png") no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 150px; }
-  /* line 9, /Users/developer/Dropbox/development/danny-anderson.com-mm/source/stylesheets/jumbotron.css.scss */
-  .jumbotron h1 {
-    color: #FFD783; }
+.jumbotron{background:url("../images/main-1.png") no-repeat;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;height:150px}.jumbotron h1{color:#FFD783}

@@ -1,8 +1,1 @@
-(function() {
-  var s;
-
-  s = new GCal("and.danny@gmail.com");
-
-  s.allEvents('#shows', 'show', 5);
-
-}).call(this);
+!function(){var a;a=new GCal("and.danny@gmail.com"),a.allEvents("#shows","show",5)}.call(this);

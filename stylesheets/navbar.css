@@ -1,16 +1,1 @@
-/* COLORS */
-/* NAVBAR */
-/* line 8, /Users/developer/Dropbox/development/danny-anderson.com-mm/source/stylesheets/navbar.css.scss */
-.navbar-inverse, .dropdown-menu {
-  background-color: black; }
-
-/* line 12, /Users/developer/Dropbox/development/danny-anderson.com-mm/source/stylesheets/navbar.css.scss */
-.dropdown-menu > li > a {
-  background-color: black;
-  color: #999999; }
-
-/* Over specified to over ride bootstrap */
-/* line 18, /Users/developer/Dropbox/development/danny-anderson.com-mm/source/stylesheets/navbar.css.scss */
-.navbar-inverse .navbar-nav > li.active > a, .dropdown-menu > li.active > a {
-  background-color: black;
-  color: #ffd783; }
+.navbar-inverse,.dropdown-menu{background-color:black}.dropdown-menu>li>a{background-color:black;color:#999999}.navbar-inverse .navbar-nav>li.active>a,.dropdown-menu>li.active>a{background-color:black;color:#ffd783}
