@@ -141,9 +141,9 @@
 
     %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"}
     %script{:src => "http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"}
-    %script{:src => "javascripts/all.js"}
+    =javascript_include_tag 'all'
     - if File.exists?("source/javascripts/#{page_name}.js.coffee")
-      %script{:src => "javascripts/#{page_name}.js"}
+      =javascript_include_tag page_name
 
     -#
     -# Asynchronous Google Analytics
