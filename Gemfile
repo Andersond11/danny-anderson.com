@@ -11,3 +11,8 @@ gem "builder", "~> 3.0"
 
 # For handlebars template precompilation
 gem 'handlebars_assets'
+
+# For Resume
+gem "maruku"
+gem "pdfkit", "~>0.5.2"
+gem 'wkhtmltopdf_binary_provider'

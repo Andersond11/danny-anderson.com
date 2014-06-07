@@ -1,3 +1,6 @@
+## Pdfmaker custom extension
+require 'makepdf'
+
 ###
 # Blog settings
 ###
@@ -11,6 +14,7 @@ activate :blog do |blog|
 end
 
 page "/feed.xml", :layout => false
+page "/resume.html", :layout => false
 
 # Clean URLs
 activate :directory_indexes
@@ -36,6 +40,20 @@ helpers do
     page
   end
 
+  def display_date(date)
+    # Change this if you prefer another date format:
+    # http://www.ruby-doc.org/stdlib-1.9.3/libdoc/date/rdoc/Date.html#method-i-strftime
+    if date.is_a?(Date)
+      date.strftime("%e %B %Y")
+    else
+      date
+    end
+  end
+
+  def display_age(birthday)
+    now = Date.today
+    now.year - birthday.year - (Date.new(now.year, birthday.month, birthday.day) > now ? 1 : 0)
+  end
 end
 
 # Sprockets
@@ -65,4 +83,7 @@ configure :build do
   
   # Or use a different image path
   # set :http_path, "/Content/images/"
+
+  # Disable this if you don't want PDF generation
+  activate :pdfmaker
 end
