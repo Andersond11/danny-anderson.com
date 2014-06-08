@@ -16,6 +16,11 @@ end
 page "/feed.xml", :layout => false
 page "/resume.html", :layout => false
 
+# Google Analytics Configuration
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-10430809-1' # Replace with your property ID.
+end
+
 # Clean URLs
 activate :directory_indexes
 

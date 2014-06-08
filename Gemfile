@@ -16,3 +16,6 @@ gem 'handlebars_assets'
 gem "maruku"
 gem "pdfkit", "~>0.5.2"
 gem 'wkhtmltopdf_binary_provider'
+
+# Google Analytics
+gem "middleman-google-analytics"
