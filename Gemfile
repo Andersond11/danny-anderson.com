@@ -11,3 +11,6 @@ gem "builder", "~> 3.0"
 
 # For handlebars template precompilation
 gem 'handlebars_assets'
+
+# Google Analytics
+gem "middleman-google-analytics"
