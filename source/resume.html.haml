@@ -1,0 +1,261 @@
+!!! 5
+%html
+  <!-- template originally from http://sampleresumetemplate.net -->
+  %head
+    %meta{ :charset => "utf-8" }
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    %meta{ :content => "IE=edge,chrome=1", 'http-equiv' => "X-UA-Compatible" }
+
+    %title
+      =data.resume.info.name || "Resume"
+
+    =stylesheet_link_tag "reset-fonts-grids", "resume" , :media => "all"
+    =stylesheet_link_tag "resume-print" , :media => "print"
+
+  %body.hresume(class= page_classes)
+    #doc2.yui-t7
+      #inner
+
+        #hd
+          %address.vcard
+            .yui-gc
+              .yui-u.first
+                %h1.fn
+                  = data.resume.info.name
+                %h2
+                  = data.resume.info.shortdesc
+                - if data.resume.info.dob? and data.resume.headers.age?
+                  %h3.age
+                    = display_age(data.resume.info.dob)
+                    &nbsp;
+                    = data.resume.headers.age
+
+              .yui-u
+                .contact-info
+                  %h3
+                    %a#pdf{ :href => "resume.pdf" }
+                      =data.resume.headers.download
+                  %h3
+                    %a.email.donotexpand{ :href => "mailto:#{data.resume.info.email}"}
+                      = data.resume.info.email
+
+                  -if data.resume.info.homepage?
+                    %h3.url
+                      %a.donotexpand{ :href => data.resume.info.homepage, :target => '_blank' }
+                        = data.resume.info.homepage
+
+                  -if data.resume.info.phone
+                    %h3.tel
+                      = data.resume.info.phone
+
+                  %span.adr
+                    %h3
+                      %span.street-address
+                        = data.resume.info.address.street
+
+                    %h3
+                      %span.locality
+                        = "#{data.resume.info.address.city},"
+                      %span.region
+                        = data.resume.info.address.region %></span>
+                      %span.postal-code
+                        = data.resume.info.address.postal_code
+
+                    %h3
+                      %span.country
+                        = data.resume.info.address.country
+
+        #bd
+          #yui-main
+            .yui-b
+
+              .yui-gf
+                .yui-u.first
+                  %h2
+                    = data.resume.headers.profile
+                .yui-u
+                  %p.summary
+                    = Maruku.new(data.resume.info.desc).to_html
+
+              .yui-gf
+                .yui-u.first
+                  %h2
+                    = data.resume.headers.skills
+
+                .yui-u
+                  - data.resume.skills.each do |skill|
+                    .talent
+                      %h2
+                        = skill.name
+                      %p
+                        = skill.desc
+
+              .yui-gf.no-page-breaker
+                .yui-u.first
+                  %h2
+                    = data.resume.headers.techs
+
+                .yui-u
+                  - data.resume.technical.each.with_index do |skill, index|
+                    /- if (index + 1) % 3 == 1
+                    %ul.soup
+
+                      %li.skill{ :rel => "tag" }
+                        = skill
+
+                    /- if (index + 1) % 3 == 0
+                    -# </ul>
+
+              .yui-gf.no-page-breaker
+                .yui-u.first
+                  %h2
+                    = data.resume.headers.jobs
+
+                .yui-u.vcalendar
+                  - data.resume.jobs.each do |job|
+                    .job.no-page-breaker.experience.vevent
+                      - if job.url?
+                        %h2.location
+                          %a{ :href => "#{job.url}", :target => '_blank' }
+                            = job.company
+                      - else
+                        %h2.location
+                          = job.company
+
+                      %h3.summary
+                        = job.title
+                      %h4
+                        %abbr.dtstart{ :title => "#{job.dates.start}" }
+                          = "#{ display_date(job.dates.start)} -"
+                        %abbr.dtend{ :title => "#{job.dates.end}" }
+                          = display_date(job.dates.end)
+                      %p
+                        = Maruku.new(job.desc).to_html
+
+              - if data.resume.projects?
+                .yui-gf.no-page-breaker
+                  .yui-u.first
+                    %h2
+                      = data.resume.headers.projects
+
+                  .yui-u.vcalendar
+                    .no-page-breaker
+                      - data.resume.projects.each do |project|
+                        .project.vevent.summary.vcard
+                          - if project.url?
+                            %h2.fn.url.org
+                              %a{ :href => project.url, :target => '_blank' }
+                                = project.name
+                          - else
+                            %h2.fn.org
+                              = project.name
+
+                          - if project.dates?
+                            %h4
+                              %abbr.dtstart{ :title => project.dates.start }
+                                = display_date(project.dates.start)
+                              - if project.dates.end?
+                                %abbr.dtend{ :title => project.dates.end }
+                                  = '-'
+                                  = display_date(project.dates.end)
+
+                          - if project.location?
+                            %span.adr
+                              %span.locality
+                                = "#{project.location.city} -" 
+                                %span.region
+                                  = project.location.region
+                              - if project.location.country?
+                                %span.country
+                                  = project.location.country
+
+                          %p
+                            = Maruku.new(project.description).to_html
+
+
+                - if data.resume.education?
+                  .yui-gf.no-page-breaker
+                    .yui-u.first
+                      %h2
+                        = data.resume.headers.education
+
+                    .yui-u.vcalendar
+                      .no-page-breaker
+                        - data.resume.education.each do |edu|
+                          %span.education.vevent.summary.vcard
+                            - if edu.url?
+                              %h2.fn.url.org
+                                #{link_to edu.name, edu.url}
+                                %span.adr
+                                  %span.locality
+                                    , 
+                                    = edu.city
+                                    , 
+                                    %span.region
+                                      = edu.region
+                                  - if edu.country?
+                                    %span.country
+                                      = edu.country
+                            - else
+                              %h2.fn.org
+                                = "#{edu.name},"
+                                %span.adr
+                                  %span.locality
+                                    , 
+                                    = edu.city
+                                    , 
+                                    %span.region
+                                      = edu.region
+                                  - if edu.country?
+                                    %span.country
+                                      = edu.country
+
+                            %h4
+                              %abbr.dtstart{ :title => edu.dates.start }
+                                = display_date(edu.dates.start)
+                              - if edu.dates.end?
+                                = '-' 
+                                %abbr.dtend{ :title => edu.dates.end }
+                                  = display_date(edu.dates.end)
+
+                            %h3
+                              = edu.title 
+                              &nbsp; 
+                              %strong
+                                = edu.grade if edu.grade?
+
+                    - if data.resume.languages?
+                      .yui-gf.no-page-breaker
+                        .yui-u.first
+                          %h2
+                            = data.resume.headers.languages
+
+                        .yui-u
+                          - data.resume.languages.each do |lang|
+                            .talent
+                              %h2
+                                = lang.name
+                              %p
+                                = lang.level
+
+
+                  .yui-gf.last.no-page-breaker
+                    .yui-u.first
+
+                      %h2
+                        = data.resume.headers.links
+
+                    .yui-u
+                      %ul.talent.no-page-breaker
+                        - data.resume.links.each do |link|
+                          %li
+                            = link_to link.name, link.url
+
+        #ft
+          %p
+            = "#{data.resume.info.name} &mdash; "
+            %a.donotexpand{ :href => "mailto: #{data.resume.info.email}" }
+            = data.resume.info.email 
+            &mdash;
+            = data.resume.info.phone if data.resume.info.phone?

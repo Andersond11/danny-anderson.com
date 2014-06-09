@@ -15,6 +15,7 @@ end
 
 page "/feed.xml", :layout => false
 page "/resume.html", :layout => false
+page "/resume-bkup.html", :layout => false
 
 # Google Analytics Configuration
 activate :google_analytics do |ga|
