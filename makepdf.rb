@@ -5,7 +5,7 @@ module PdfMaker
         begin
           require 'pdfkit'
 
-          kit = PDFKit.new(File.new('build/index.html'),
+          kit = PDFKit.new(File.new('build/resume/index.html'),
                            :margin_top => 10,
                            :margin_bottom => 0,
                            :margin_left => 0,
