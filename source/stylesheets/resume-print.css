@@ -14,10 +14,6 @@ a#pdf {
     letter-spacing: 0.03em;
 }
 
-a:not(.donotexpand):link:after, a:not(.donotexpand):visited:after {
-  content: " - " attr(href) " ";
-}
-
 div.no-page-breaker {
     page-break-inside: avoid;
 }
