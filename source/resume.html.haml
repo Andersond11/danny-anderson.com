@@ -55,12 +55,16 @@
                         = data.resume.info.address.street
 
                     %h3
-                      %span.locality
-                        = "#{data.resume.info.address.city},"
-                      %span.region
-                        = data.resume.info.address.region %></span>
-                      %span.postal-code
-                        = data.resume.info.address.postal_code
+                      - if data.resume.info.address.city
+                        %span.locality
+                          = data.resume.info.address.city
+                      - if data.resume.info.address.region
+                        %span.region
+                          , 
+                          = data.resume.info.address.region
+                      - if data.resume.info.address.postal_code
+                        %span.postal-code
+                          = data.resume.info.address.postal_code
 
                     %h3
                       %span.country
