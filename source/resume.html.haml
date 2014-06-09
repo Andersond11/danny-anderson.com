@@ -240,17 +240,18 @@
                                 = lang.level
 
 
-                  .yui-gf.last.no-page-breaker
-                    .yui-u.first
+                  - if data.resume.links
+                    .yui-gf.last.no-page-breaker
+                      .yui-u.first
 
-                      %h2
-                        = data.resume.headers.links
+                        %h2
+                          = data.resume.headers.links
 
-                    .yui-u
-                      %ul.talent.no-page-breaker
-                        - data.resume.links.each do |link|
-                          %li
-                            = link_to link.name, link.url
+                      .yui-u
+                        %ul.talent.no-page-breaker
+                          - data.resume.links.each do |link|
+                            %li
+                              = link_to link.name, link.url
 
         #ft
           %p
