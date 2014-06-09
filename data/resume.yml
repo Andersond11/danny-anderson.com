@@ -1,0 +1,185 @@
+headers:
+    profile: Profile
+    skills: Skills
+    languages: Languages
+    techs: Technical
+    jobs: Experiences
+    education: Education
+    links: Links
+    download: Download PDF
+    age: y/o
+    projects: Projects
+
+info:
+    name: Danny Anderson
+    # dob: 1980-01-01 # not mandatory
+    shortdesc: Software Developer
+    email: danny@danny-anderson.com
+    phone:
+    homepage: http://danny-anderson.com/ # not mandatory
+    address:
+        street: 
+        # city: 
+        # region: 
+        # postal_code: 
+        # country: U.S# not mandatory
+    desc: |
+        A software engineer with seven years of front and back-end development experience, I&apos;m interested in finding a position where I can further my understanding of ruby and/or rails in a team environment with a focus on TDD or BDD.
+
+skills:
+    - name: Server Side 
+      desc: Ruby and PHP
+    - name: Front End
+      desc: Responsive design
+    - name: 
+      desc: 
+
+# languages:
+#    - name: Gibberish
+#      level: Native language
+#    - name: Manager Speak
+#      level: Fluent
+
+technical:
+    - HTML5
+    - Haml
+    - Markdown
+    - CSS3
+    - SASS
+    - Javascript
+    - Coffeescript
+    - jQuery
+    - PHP
+    - Git
+    - Ruby/Rails
+    - Vim
+    - Linux
+    - MySQL
+    - MongoDB
+    - MS SQL
+    - Shell Scripting
+
+# links:
+#     - name: Link1
+#       url: http://example.com/
+#     - name: Another link
+#       url: https://example.com/
+
+jobs:
+    - title: Application Developer
+      company: TWG Plus - Higher Education Marketing
+      url: http://twgplus.com/
+      dates:
+          start: 2013-03-15
+          end: Present
+      desc: |
+          Originally hired to take over a legacy campaign management application built in Rails, I stepped into a number of other roles as needed including working as the front end developer on client sites for several months while interviewing to hire a dedicated front end developer. I managed our front end developer and several outsource developers.
+
+      projects:
+          - title: Campaign Command Center
+            tech: Ruby on Rails (1.8.7 / 3.0.20) - Mongoid/MongoDB - AWS
+            desc: |
+                Maintained an internally developed CMS and reporting application used as a hub to track and report on user responses from hundreds of thousands of emails sent each day, and gather user data to help further drive client communications.
+               
+                Wrote shell scripts to export a single clients dataset from production to development, allowing proper debugging of client issues
+                Automated server configuration management with Puppet and rake
+                Automated the application deployment process with Capistrano
+                Re-established proper Git usage based on the gitflow model
+                Began the process of adding RSpec coverage
+                Replaced and managed outsource developers
+
+          - title: Client Websites
+            tech: HAML/HTML5 - SASS/CSS3 - Coffeescript/jQuery/Javascript
+            desc: |
+                Worked with in house designers to create several award winning responsive websites. I used this opportunity to begin moving our front-end development standards and processes from separate desktop/mobile sites toward responsive designs.
+
+    - title: Survey Programmer
+      company: Mindwave Research
+      url: http://mindwaveresearch.com
+      dates:
+          start: 2010-09-01
+          end: 2013-03-15
+      desc: |
+          Worked with project staff to develop international web based surveys for numerous clients. Implemented web based tools to improve internal business processes. Led the initiative to get all internal development under version control using Git and automated deployment using Capistrano.
+
+    - title: Software Developer
+      company: Freelance
+      dates:
+          start: 2006-05-01
+          end: 2010-11-01
+      desc: |
+          I worked closely with a partner who handled all the graphic design work on these projects while I handled all of the development
+
+
+education: # this section is not mandatory
+    - name: Berklee College of Music
+      url: http://www.berklee.edu # not mandatory
+      city: Boston 
+      region: Massachusetts
+      country: USA # not mandatory
+      dates:
+        start: 1999-06-01
+        end: 2001-05-31 # not mandatory
+      title: Bachelor of Music, magna cum laude
+
+    - name: Austin Community College
+      url: http://austincc.edu # not mandatory
+      city: Austin 
+      region: Texas 
+      country: USA # not mandatory
+      dates:
+        start: 2006-01-01
+        end: 2009-01-01 # not mandatory
+      title: Course work in Computer Science, with a focus on C++ and Object Oriented Programming in Java
+
+projects: # this section is not mandatory
+       
+    - name: Survey Programming
+      tech: Javascript / jQuery - C# dll’s
+      description: |
+          Programmed national/international market research studies primarily focused on B2B technology companies. Developed extensions for our survey platform using jQuery and occasionally C# with the survey platforms SDK to create dll’s.
+      dates: # not mandatory
+        start: 2013-02-18
+        end: 2014-04-05 # not mandatory
+
+    - name: TAP
+      tech: PHP / Internally developed MVC Framework - MS SQL Server
+      description: |
+         Programmed national/international market research studies primarily focused on B2B technology companies. Developed extensions for our survey platform using jQuery and occasionally C# with the survey platforms SDK to create dll’s.s a market research study with a data portal which allows media planners to view the aggregate survey results in various ways to help guide their marketing and media planning. I worked with the lead programmer and our market research scientist to determine the feasibility of programming particular methodologies.
+      dates: # not mandatory
+        start: 2013-02-18
+        end: 2014-04-05 # not mandatory
+
+    - name: Translation Module
+      description: |
+          PHP - MySQL - This allowed a user to upload an XML translation file generated by our survey design tool. The file was reformatted for easier use by our translation vendors and the files they returned were converted back to the format our survey design client required. This tool reduced the time spent importing text for each language from over half a day to under half an hour as well as reducing the amount of error in the resulting import.
+      dates: # not mandatory
+        start: 2013-02-18
+        end: 2014-04-05 # not mandatory
+
+    - name: Sample Manager
+      tech: PHP - MS SQL
+      description: |
+          Generated unique links for our surveys. Each link was tied to a specific survey, language, and vendor with up to a million links created per survey. The system also tracked which links were used and various metrics such as the last login time for each link.
+      dates: # not mandatory
+        start: 2013-02-18
+        end: 2014-04-05 # not mandatory
+      location: # not mandatory
+        city: Florence
+        region: Tuscany
+        country: Italy # not mandatory
+
+# Sample Project listing
+#
+#    - name: Sample Manager
+#      tech: PHP - MS SQL
+#      description: |
+#          Generated unique links for our surveys. Each link was tied to a specific survey, language, and vendor with up to a million links created per survey. The system also tracked which links were used and various metrics such as the last login time for each link.
+#      url: https://github.com/reefab/ResumeMan # not mandatory
+#      dates: # not mandatory
+#        start: 2013-02-18
+#        end: 2014-04-05 # not mandatory
+#      location: # not mandatory
+#        city: Florence
+#        region: Tuscany
+#        country: Italy # not mandatory
