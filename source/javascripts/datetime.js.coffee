@@ -4,7 +4,7 @@ class @DateTime
     d = new Date date
     hours = d.getHours()
     minutes = d.getMinutes()
-    am_or_pm = if hours > 12 then 'pm' else 'am'
+    am_or_pm = if hours >= 12 then 'pm' else 'am'
     hrs = @convert_military_hours(hours)
     min_prefix = if minutes < 10 then '0' else ''
     mins =  min_prefix + minutes
