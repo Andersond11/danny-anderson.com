@@ -26,14 +26,6 @@ info:
     desc: |
         A software engineer with seven years of front and back-end development experience, I&apos;m interested in finding a position where I can further my understanding of ruby and/or rails in a team environment with a focus on TDD or BDD.
 
-skills:
-    - name: Server Side 
-      desc: Ruby and PHP
-    - name: Front End
-      desc: Responsive design
-    - name: 
-      desc: 
-
 # languages:
 #    - name: Gibberish
 #      level: Native language
