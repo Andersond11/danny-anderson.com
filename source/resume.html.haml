@@ -82,18 +82,19 @@
                   %p.summary
                     = Maruku.new(data.resume.info.desc).to_html
 
-              .yui-gf
-                .yui-u.first
-                  %h2
-                    = data.resume.headers.skills
+              - if data.resume.skills?
+                .yui-gf
+                  .yui-u.first
+                    %h2
+                      = data.resume.headers.skills
 
-                .yui-u
-                  - data.resume.skills.each do |skill|
-                    .talent
-                      %h2
-                        = skill.name
-                      %p
-                        = skill.desc
+                  .yui-u
+                    - data.resume.skills.each do |skill|
+                      .talent
+                        %h2
+                          = skill.name
+                        %p
+                          = skill.desc
 
               .yui-gf.no-page-breaker
                 .yui-u.first
