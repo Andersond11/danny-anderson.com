@@ -154,6 +154,10 @@
                           - else
                             %h2.fn.org
                               = project.name
+                          
+                          - if project.tech?
+                            %h3.fn.url.org
+                              = project.tech
 
                           - if project.dates?
                             %h4
