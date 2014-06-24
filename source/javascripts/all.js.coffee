@@ -1,3 +1,4 @@
+#= require bootstrap
 #= require handlebars
 #= require datetime
 #= require gcal

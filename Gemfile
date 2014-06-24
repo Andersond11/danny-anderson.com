@@ -9,6 +9,9 @@ gem "middleman-gh-pages"
 # For feed.xml.builder
 gem "builder", "~> 3.0"
 
+# For bootstrap
+gem 'bootstrap-sass'
+
 # For handlebars template precompilation
 gem 'handlebars_assets'
 

@@ -71,7 +71,6 @@
     -# CSS
     -# ==========================================================================
 
-    = stylesheet_link_tag "http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"
     = stylesheet_link_tag "sticky-footer.css"
     = stylesheet_link_tag "all.css"
     -# %link{:rel => "stylesheet", :media => "only screen and (min-width: 45em)", :href => "/css/widescreen.css"}
@@ -140,7 +139,6 @@
     -# Custom JS
 
     =javascript_include_tag 'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'
-    =javascript_include_tag 'http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'
     =javascript_include_tag 'all'
     - if File.exists?("source/javascripts/#{page_name}.js.coffee")
       =javascript_include_tag page_name

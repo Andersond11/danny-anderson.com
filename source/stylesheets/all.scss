@@ -1,11 +1,9 @@
-/*
-*= require config
-*
-*= require jumbotron
-*= require navbar
-*= require show
-*= require about
-*= require social-links
-*= require youtube-embeds
-*/
+@import "bootstrap";
 
+@import "config";
+@import "jumbotron";
+@import "navbar";
+@import "show";
+@import "about";
+@import "social-links";
+@import "youtube-embeds";
