@@ -20,7 +20,7 @@ class @DateTime
     _month = d.getMonth()
     _year  = d.getFullYear()
 
-    _date + " " + months[_month] + " " + _year
+    months[_month] + " " + _date
 
   @convert_military_hours: (hours) ->
     if (hours == 0) then 12 else if (hours <= 12) then hours else hours % 12
