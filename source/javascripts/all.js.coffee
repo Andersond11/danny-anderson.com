@@ -1,5 +1,5 @@
 #= require bootstrap
 #= require handlebars
-#= require datetime
-#= require gcal
+#= require _datetime
+#= require _gcal
 #= require_tree ./templates
