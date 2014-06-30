@@ -1,1 +1,1 @@
-!function(){var a;a=new GCal("and.danny@gmail.com"),a.allEvents("#shows","show",5)}.call(this);
+!function(){var o;o=new GCal("bnviolnr8571qo4e4poij1lso8%40group.calendar.google.com"),o.allEvents("#shows","show",5)}.call(this);
