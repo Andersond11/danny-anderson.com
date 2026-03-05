@@ -383,6 +383,30 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid #1f2937;
 }
 
+.recording-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.recording-label {
+  font-family: var(--font-rokkitt);
+  font-size: 1rem;
+  color: var(--color-site-gold);
+  margin: 0 0 0.35rem 0;
+}
+
+.recording-note {
+  margin: 0 0 0.6rem 0;
+  font-size: 0.875rem;
+  color: #888;
+}
+
+.apple-music-embed {
+  border-radius: 12px;
+  border: none;
+}
+
 .project-list {
   display: flex;
   flex-direction: column;
