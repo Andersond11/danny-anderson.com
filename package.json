@@ -1,0 +1,22 @@
+{
+  "name": "danny-anderson.com",
+  "version": "2.0.0",
+  "description": "Personal website for Danny Anderson",
+  "scripts": {
+    "build": "eleventy && npm run build:css",
+    "build:css": "postcss src/css/styles.css -o _site/css/styles.css",
+    "start": "concurrently \"eleventy --serve\" \"postcss src/css/styles.css -o _site/css/styles.css --watch\"",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-rss": "^2.0.0",
+    "@tailwindcss/postcss": "^4.0.0",
+    "concurrently": "^9.0.0",
+    "js-yaml": "^4.1.0",
+    "markdown-it": "^14.0.0",
+    "postcss": "^8.0.0",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^4.0.0"
+  }
+}

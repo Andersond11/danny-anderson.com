@@ -1,0 +1,169 @@
+---
+layout: resume-layout
+permalink: /resume/
+eleventyExcludeFromCollections: true
+---
+<div class="resume" id="resume">
+
+  <header class="resume-header">
+    <div class="resume-header-grid">
+      <div class="resume-name-block">
+        <h1 class="resume-name">{{ resume.info.name }}</h1>
+        <h2 class="resume-shortdesc">{{ resume.info.shortdesc }}</h2>
+      </div>
+
+      <div class="resume-contact">
+        <p><a href="/resume.pdf" class="resume-pdf-link">{{ resume.headers.download }}</a></p>
+        <p><a href="mailto:{{ resume.info.email }}" class="resume-email">{{ resume.info.email }}</a></p>
+        {% if resume.info.homepage %}
+        <p><a href="{{ resume.info.homepage }}" target="_blank">{{ resume.info.homepage }}</a></p>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  <main class="resume-main">
+
+    <section class="resume-section">
+      <div class="resume-section-label">
+        <h2>{{ resume.headers.profile }}</h2>
+      </div>
+      <div class="resume-section-content">
+        <div class="resume-summary">{{ resume.info.desc | md | safe }}</div>
+      </div>
+    </section>
+
+    {% if resume.skills %}
+    <section class="resume-section">
+      <div class="resume-section-label">
+        <h2>{{ resume.headers.skills }}</h2>
+      </div>
+      <div class="resume-section-content resume-skills-grid">
+        {% for skill in resume.skills %}
+        <div class="resume-skill">
+          <h3>{{ skill.name }}</h3>
+          <p>{{ skill.desc }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    <section class="resume-section">
+      <div class="resume-section-label">
+        <h2>{{ resume.headers.techs }}</h2>
+      </div>
+      <div class="resume-section-content">
+        <ul class="resume-tech-list">
+          {% for skill in resume.technical %}
+          <li class="resume-tech-item">{{ skill }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+
+    <section class="resume-section">
+      <div class="resume-section-label">
+        <h2>{{ resume.headers.jobs }}</h2>
+      </div>
+      <div class="resume-section-content">
+        {% for job in resume.jobs %}
+        <div class="resume-job">
+          <h2 class="resume-job-company">
+            {% if job.url %}
+            <a href="{{ job.url }}" target="_blank">{{ job.company }}</a>
+            {% else %}
+            {{ job.company }}
+            {% endif %}
+          </h2>
+          <h3 class="resume-job-title">{{ job.title }}</h3>
+          <h4 class="resume-job-dates">
+            {{ job.dates.start | displayDate }} &ndash; {{ job.dates.end | displayDate }}
+          </h4>
+          <div class="resume-job-desc">{{ job.desc | md | safe }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    {% if resume.projects %}
+    <section class="resume-section">
+      <div class="resume-section-label">
+        <h2>{{ resume.headers.projects }}</h2>
+      </div>
+      <div class="resume-section-content">
+        {% for project in resume.projects %}
+        <div class="resume-project">
+          <h2 class="resume-project-name">
+            {% if project.url %}
+            <a href="{{ project.url }}" target="_blank">{{ project.name }}</a>
+            {% else %}
+            {{ project.name }}
+            {% endif %}
+          </h2>
+          {% if project.tech %}
+          <h3 class="resume-project-tech">{{ project.tech }}</h3>
+          {% endif %}
+          <div class="resume-project-desc">{{ project.description | md | safe }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if resume.education %}
+    <section class="resume-section">
+      <div class="resume-section-label">
+        <h2>{{ resume.headers.education }}</h2>
+      </div>
+      <div class="resume-section-content">
+        {% for edu in resume.education %}
+        <div class="resume-education">
+          <h2 class="resume-edu-name">
+            {% if edu.url %}
+            <a href="{{ edu.url }}" target="_blank">{{ edu.name }}</a>
+            {% else %}
+            {{ edu.name }}
+            {% endif %}
+            {% if edu.city %}, {{ edu.city }}{% endif %}
+            {% if edu.region %}, {{ edu.region }}{% endif %}
+          </h2>
+          <h4 class="resume-edu-dates">
+            {{ edu.dates.start | displayDate }}
+            {% if edu.dates.end %} &ndash; {{ edu.dates.end | displayDate }}{% endif %}
+          </h4>
+          <h3 class="resume-edu-title">
+            {{ edu.title }}
+            {% if edu.grade %} <strong>{{ edu.grade }}</strong>{% endif %}
+          </h3>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if resume.links %}
+    <section class="resume-section resume-section--last">
+      <div class="resume-section-label">
+        <h2>{{ resume.headers.links }}</h2>
+      </div>
+      <div class="resume-section-content">
+        <ul class="resume-links-list">
+          {% for link in resume.links %}
+          <li><a href="{{ link.url }}">{{ link.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+    {% endif %}
+
+  </main>
+
+  <footer class="resume-footer">
+    <p>{{ resume.info.name }} &mdash;
+      <a href="mailto:{{ resume.info.email }}">{{ resume.info.email }}</a>
+      {% if resume.info.phone %} &mdash; {{ resume.info.phone }}{% endif %}
+    </p>
+  </footer>
+
+</div>

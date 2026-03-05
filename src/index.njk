@@ -1,0 +1,30 @@
+---
+layout: base
+title: Home
+---
+<div class="row home-row">
+  <section class="col-shows" id="shows">
+    <h2 class="section-heading">Upcoming Shows</h2>
+    <div id="events"></div>
+  </section>
+
+  <div class="col-video">
+    <div class="video-container">
+      <iframe
+        frameborder="0"
+        allowfullscreen
+        src="//www.youtube.com/embed/2YDAY-mHbeo?rel=0&controls=0&showinfo=0"
+        title="Danny Anderson - Video"
+      ></iframe>
+    </div>
+  </div>
+</div>
+
+<script src="/js/datetime.js"></script>
+<script src="/js/gcal.js"></script>
+<script>
+  // Initialize Google Calendar shows
+  // Note: Requires updating with a valid Google Calendar API v3 key and calendar ID
+  // const cal = new GCal('your-calendar-id@group.calendar.google.com');
+  // cal.allEvents('#events');
+</script>
