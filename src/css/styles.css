@@ -1,9 +1,17 @@
-@import "tailwindcss";
+/* Minimal CSS reset */
+*, *::before, *::after { box-sizing: border-box; }
+html { line-height: 1.15; -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+h1, h2, h3, h4 { margin: 0; }
+ul { margin: 0; padding: 0; }
+img { display: block; max-width: 100%; }
+button { font-family: inherit; cursor: pointer; }
+a { background-color: transparent; }
 
 /* ============================================================
-   Custom theme — preserves the original site color palette
+   Custom theme — site color palette
    ============================================================ */
-@theme {
+:root {
   --color-site-bg: #0d111a;
   --color-site-text: #aaaaaa;
   --color-site-gold: #FFD783;
@@ -13,7 +21,6 @@
   --color-dropdown-bg: #111827;
   --color-dropdown-text: #999999;
   --color-link: #6ea8fe;
-
   --font-rokkitt: 'Rokkitt', serif;
 }
 
