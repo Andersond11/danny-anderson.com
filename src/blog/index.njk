@@ -1,0 +1,23 @@
+---
+layout: base
+title: Blog
+permalink: /blog/
+---
+<div class="blog-index">
+  <h1 class="section-heading">Blog</h1>
+
+  {% if collections.blog.length %}
+  <ul class="blog-list">
+    {% for post in collections.blog %}
+    <li class="blog-list-item">
+      <a href="{{ post.url }}" class="blog-post-link">
+        <span class="blog-post-title">{{ post.data.title }}</span>
+        <span class="blog-post-date">{{ post.date | blogDate }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No posts yet.</p>
+  {% endif %}
+</div>
