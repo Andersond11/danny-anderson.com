@@ -2,29 +2,20 @@
 layout: base
 title: Home
 ---
-<div class="row home-row">
-  <section class="col-shows" id="shows">
-    <h2 class="section-heading">Upcoming Shows</h2>
-    <div id="events"></div>
-  </section>
-
-  <div class="col-video">
-    <div class="video-container">
-      <iframe
-        frameborder="0"
-        allowfullscreen
-        src="//www.youtube.com/embed/2YDAY-mHbeo?rel=0&controls=0&showinfo=0"
-        title="Danny Anderson - Video"
-      ></iframe>
-    </div>
-  </div>
+<div class="home-intro">
+  <p>I'm a software developer and musician based in Austin, TX. I spend my days building software and my spare time thinking about music.</p>
 </div>
 
-<script src="/js/datetime.js"></script>
-<script src="/js/gcal.js"></script>
-<script>
-  // Initialize Google Calendar shows
-  // Note: Requires updating with a valid Google Calendar API v3 key and calendar ID
-  // const cal = new GCal('your-calendar-id@group.calendar.google.com');
-  // cal.allEvents('#events');
-</script>
+<div class="home-cards">
+  <a href="/software/" class="home-card">
+    <h2 class="home-card-heading">Software</h2>
+    <p class="home-card-desc">Web development, infrastructure, and the work I've done over the past decade-plus building things on the web.</p>
+    <span class="home-card-cta">View my work &rarr;</span>
+  </a>
+
+  <a href="/music/" class="home-card">
+    <h2 class="home-card-heading">Music</h2>
+    <p class="home-card-desc">Twenty years as a performing musician — from Southeast Texas to Austin to the Monterey Jazz Festival.</p>
+    <span class="home-card-cta">Explore my music &rarr;</span>
+  </a>
+</div>

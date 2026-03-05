@@ -260,60 +260,81 @@ h1, h2, h3, h4, h5, h6 {
 /* ============================================================
    Home page
    ============================================================ */
-.home-row {
+.home-intro {
+  max-width: 640px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.home-cards {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 2rem;
-  align-items: start;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 860px;
+  margin: 0 auto;
 }
 
-.col-shows {
-  padding-top: 0.5rem;
+.home-card {
+  display: block;
+  background-color: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 6px;
+  padding: 2rem;
+  text-decoration: none;
+  color: var(--color-site-text);
+  transition: border-color 0.2s, background-color 0.2s;
 }
 
-.section-heading {
-  font-family: var(--font-rokkitt);
+.home-card:hover {
+  border-color: var(--color-site-gold);
+  background-color: #161e2e;
+  text-decoration: none;
+}
+
+.home-card-heading {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.home-card-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+}
+
+.home-card-cta {
+  font-size: 0.9rem;
   color: var(--color-site-gold);
-  font-size: 1.5rem;
+}
+
+/* ============================================================
+   Shared page layout
+   ============================================================ */
+.page-content {
+  max-width: 760px;
+}
+
+.page-intro {
+  margin-bottom: 2.5rem;
+}
+
+.page-intro p {
   margin-bottom: 1rem;
 }
 
-.show {
-  margin-bottom: 1.25rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #1f2937;
-}
-
-.show:last-child {
-  border-bottom: none;
-}
-
-.show .when {
-  font-size: 0.85rem;
-  color: var(--color-site-gold);
-  margin-bottom: 0.2rem;
-}
-
-.show .faded {
-  opacity: 0.6;
-}
-
-.show .who {
-  font-weight: 600;
-  color: #ccc;
-}
-
-.show .where {
-  font-size: 0.9rem;
-}
+/* ============================================================
+   Music page
+   ============================================================ */
 
 /* Responsive video embed */
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
-  padding-top: 30px;
   height: 0;
   overflow: hidden;
+  border-radius: 4px;
 }
 
 .video-container iframe,
@@ -324,6 +345,67 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.music-section {
+  margin-bottom: 3rem;
+}
+
+.music-section-heading {
+  font-size: 1.3rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #1f2937;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-name {
+  font-family: var(--font-rokkitt);
+  font-size: 1.05rem;
+  color: var(--color-site-gold);
+  margin-bottom: 0.35rem;
+}
+
+.project-name a {
+  color: var(--color-site-gold);
+}
+
+.project-desc {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.press-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.press-item {
+  font-size: 0.95rem;
+  padding-left: 1rem;
+  border-left: 2px solid #1f2937;
+  line-height: 1.5;
+}
+
+.press-outlet {
+  color: var(--color-site-gold);
+  font-weight: 600;
 }
 
 /* ============================================================
@@ -668,7 +750,11 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
   }
 
-  .home-row {
+  .home-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .video-grid {
     grid-template-columns: 1fr;
   }
 

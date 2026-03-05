@@ -12,23 +12,11 @@
       <li class="nav-item {% if page.url == '/' %}nav-item--active{% endif %}">
         <a href="/" class="nav-link">Home</a>
       </li>
-      <li class="nav-item nav-item--dropdown {% if '/about' in page.url %}nav-item--active{% endif %}">
-        <button class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
-          About
-          <span class="nav-caret" aria-hidden="true">&#9660;</span>
-        </button>
-        <ul class="nav-dropdown" role="menu">
-          <li role="menuitem">
-            <a href="/about-software/" class="nav-dropdown-link {% if page.url == '/about-software/' %}nav-dropdown-link--active{% endif %}">
-              Software Developer
-            </a>
-          </li>
-          <li role="menuitem">
-            <a href="/about-musician/" class="nav-dropdown-link {% if page.url == '/about-musician/' %}nav-dropdown-link--active{% endif %}">
-              Musician
-            </a>
-          </li>
-        </ul>
+      <li class="nav-item {% if page.url == '/software/' %}nav-item--active{% endif %}">
+        <a href="/software/" class="nav-link">Software</a>
+      </li>
+      <li class="nav-item {% if page.url == '/music/' %}nav-item--active{% endif %}">
+        <a href="/music/" class="nav-link">Music</a>
       </li>
     </ul>
   </div>
