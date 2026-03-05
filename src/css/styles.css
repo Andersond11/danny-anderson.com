@@ -406,6 +406,24 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.6;
 }
 
+.press-quote {
+  margin: 0 0 2rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--color-site-gold);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+.press-quote-attribution {
+  display: block;
+  margin-top: 0.5rem;
+  font-style: normal;
+  font-size: 0.875rem;
+  color: #888;
+}
+
 .press-list {
   list-style: none;
   padding: 0;
